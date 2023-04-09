@@ -1,17 +1,19 @@
-export default function FloatingButton({
-  handleFloatingButtonClick,
-}: {
-  handleFloatingButtonClick: () => void;
-}) {
+import PropTypes from 'prop-types';
+
+export default function FloatingButton({ children }) {
   return (
     <div className="fixed bottom-0 right-0 m-4">
       <button
         type="button"
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-        onClick={handleFloatingButtonClick}
+        // onClick={handleFloatingButtonClick}
       >
-        +
+        {children}
       </button>
     </div>
   );
 }
+
+FloatingButton.propTypes = {
+  children: PropTypes.node.isRequired,
+};

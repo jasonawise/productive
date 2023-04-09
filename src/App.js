@@ -1,5 +1,5 @@
 import { Layout } from './components/layout';
-import { TaskList } from './Modules';
+import { TaskList } from './Modules/TaskList';
 
 function App() {
   return (

@@ -9,6 +9,12 @@ export default function TaskReducer(tasks, action) {
           completed: false,
         },
       ];
+    case 'SET_IS_ADDING_TASK': {
+      return {
+        ...tasks,
+        isAddingTask: action.isAddingTask,
+      };
+    }
     default:
       break;
   }

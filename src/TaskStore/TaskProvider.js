@@ -23,13 +23,16 @@ export function useTasksDispatch() {
   return React.useContext(TaskDispatchContext);
 }
 
-export const initialState = [
-  {
-    id: 1,
-    name: 'Task 1',
-    completed: false,
-  },
-];
+export const initialState = {
+  isAddingTask: false,
+  tasks: [
+    {
+      id: 1,
+      name: 'Task 1',
+      completed: false,
+    },
+  ],
+};
 
 TaskProvider.propTypes = {
   children: PropTypes.node.isRequired,
