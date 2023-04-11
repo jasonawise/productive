@@ -1,14 +1,15 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import TaskProvider from '../../TaskStore/TaskProvider';
 import { FloatingButton } from '../floatingButton';
+import { useTasks } from '../../TaskStore/TaskProvider';
 
 export default function Layout({ children }) {
+  const tasks = useTasks();
   return (
-    <TaskProvider>
+    <div>
       <section className="p-4">{children}</section>
-      <FloatingButton>+</FloatingButton>
-    </TaskProvider>
+      {tasks.isAddingTask ? null : <FloatingButton>+</FloatingButton>}
+    </div>
   );
 }
 

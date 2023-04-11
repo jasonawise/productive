@@ -9,7 +9,8 @@ export default function TaskReducer(tasks, action) {
           completed: false,
         },
       ];
-    case 'SET_IS_ADDING_TASK': {
+    case 'TOGGLE_ADD_TASK': {
+      console.log(action);
       return {
         ...tasks,
         isAddingTask: action.isAddingTask,
