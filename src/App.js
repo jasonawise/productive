@@ -1,8 +1,9 @@
+import React from 'react';
 import { Layout } from './components/layout';
 import { TaskList } from './Modules/TaskList';
 import TaskProvider from './TaskStore/TaskProvider';
-import { AddTask } from './Modules/AddTask';
 
+const AddTask = React.lazy(() => import('./Modules/AddTask/AddTask'));
 function App() {
   return (
     <div className="App">
